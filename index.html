@@ -8,119 +8,209 @@
 </head>
 <body>
 
-<!-- ── Header ──────────────────────────────────────────────────────── -->
-<header class="site-header">
-  <div class="header-brand">
-    <h1>Customer Health — weekly digest</h1>
-    <span class="demo-badge">Demo · synthetic sample data</span>
-  </div>
-  <span class="week-label" id="weekLabel">W26 · 2026</span>
-</header>
+<div class="app-shell">
 
-<!-- ── Navigation ──────────────────────────────────────────────────── -->
-<nav class="site-nav">
-  <button class="nav-btn active" data-view="review">This week's review</button>
-  <button class="nav-btn" data-view="history">History</button>
-  <button class="nav-btn" data-view="syshealth">System health</button>
-</nav>
-
-<!-- ── Main ────────────────────────────────────────────────────────── -->
-<main class="main-content">
-
-  <!-- ── View 1: This week's review ────────────────────────────── -->
-  <section class="view active" id="view-review">
-
-    <!-- Toggle -->
-    <div class="view-toggle-bar">
-      <span class="toggle-label">Pipeline stage</span>
-      <div class="toggle-switch">
-        <button class="toggle-opt selected" id="toggleBefore">Before Friday</button>
-        <button class="toggle-opt" id="toggleFriday">Friday — data ready</button>
-      </div>
-      <span class="toggle-hint" id="toggleHint">Data not yet generated — switch to Friday to see account summaries.</span>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="stats-bar" id="statsBar">
-      <div class="stat-chip green">
-        <span class="stat-num" id="countGreen">—</span>
-        <span class="stat-lbl">Green</span>
-      </div>
-      <div class="stat-chip yellow">
-        <span class="stat-num" id="countYellow">—</span>
-        <span class="stat-lbl">Yellow</span>
-      </div>
-      <div class="stat-chip red">
-        <span class="stat-num" id="countRed">—</span>
-        <span class="stat-lbl">Red</span>
-      </div>
-      <div class="stat-chip gray">
-        <span class="stat-num" id="countNodata">—</span>
-        <span class="stat-lbl">No data</span>
+  <!-- ── Sidebar ─────────────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-logo">CH</div>
+      <div class="brand-text">
+        <div class="brand-name">Customer Health</div>
+        <div class="brand-sub">weekly digest</div>
       </div>
     </div>
 
-    <!-- Accounts grid -->
-    <div class="accounts-grid" id="accountsGrid"></div>
+    <nav class="sidebar-nav">
+      <button class="snav-btn active" data-view="overview">
+        <svg viewBox="0 0 20 20" fill="none">
+          <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span>Overview</span>
+      </button>
 
-  </section>
+      <button class="snav-btn" data-view="analytics">
+        <svg viewBox="0 0 20 20" fill="none">
+          <polyline points="2,14 6,9 10,11 14,5 18,7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="2" y1="17" x2="18" y2="17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span>Analytics</span>
+      </button>
 
-  <!-- ── View 2: History ───────────────────────────────────────── -->
-  <section class="view" id="view-history">
+      <button class="snav-btn" data-view="connections">
+        <svg viewBox="0 0 20 20" fill="none">
+          <circle cx="5" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="15" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="7.5" y1="10" x2="12.5" y2="10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="5" y1="3" x2="5" y2="7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="15" y1="12.5" x2="15" y2="17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span>Connections</span>
+      </button>
+    </nav>
 
-    <div class="history-controls">
-      <label for="accountSelect">Account</label>
-      <select class="account-select" id="accountSelect">
-        <!-- populated by JS -->
-      </select>
+    <div class="sidebar-footer">
+      <div class="demo-badge-sidebar">
+        <span class="demo-dot"></span>
+        Demo · synthetic sample data
+      </div>
+      <div class="sidebar-footer-note">Not connected to any live system</div>
     </div>
+  </aside>
 
-    <div class="chart-card">
-      <div class="chart-title" id="histChartTitle">Select an account</div>
-      <div class="chart-subtitle" id="histChartSub"></div>
-      <div class="chart-legend">
-        <div class="legend-item">
-          <div class="legend-dot" style="background:#4a7fc1"></div>
-          <span>Health status (left axis: Red · Yellow · Green)</span>
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ── Main wrapper ────────────────────────────────────────── -->
+  <div class="main-wrapper">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
+            <line x1="3" y1="6" x2="17" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="17" y2="10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="3" y1="14" x2="17" y2="14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <h1 class="topbar-title" id="topbarTitle">Overview</h1>
+      </div>
+      <div class="topbar-right">
+        <span class="week-chip">W26 · 2026</span>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+      <!-- ── View: Overview ───────────────────────────────── -->
+      <section class="view active" id="view-overview">
+
+        <!-- Toggle bar -->
+        <div class="view-toggle-bar">
+          <span class="toggle-label">Pipeline stage</span>
+          <div class="toggle-switch">
+            <button class="toggle-opt selected" id="toggleBefore">Before Friday</button>
+            <button class="toggle-opt" id="toggleFriday">Friday — data ready</button>
+          </div>
+          <span class="toggle-hint" id="toggleHint">Data not yet generated — switch to Friday to see account summaries.</span>
         </div>
-        <div class="legend-item">
-          <div class="legend-dot" style="background:#94a3b8"></div>
-          <span>ChatAgent sessions (right axis, dashed)</span>
+
+        <!-- Stats chips -->
+        <div class="stats-bar">
+          <div class="stat-chip green">
+            <span class="stat-num" id="countGreen">—</span>
+            <span class="stat-lbl">Green</span>
+          </div>
+          <div class="stat-chip yellow">
+            <span class="stat-num" id="countYellow">—</span>
+            <span class="stat-lbl">Yellow</span>
+          </div>
+          <div class="stat-chip red">
+            <span class="stat-num" id="countRed">—</span>
+            <span class="stat-lbl">Red</span>
+          </div>
+          <div class="stat-chip gray">
+            <span class="stat-num" id="countNodata">—</span>
+            <span class="stat-lbl">No data</span>
+          </div>
         </div>
-      </div>
-      <div class="chart-container">
-        <canvas id="historyChart"></canvas>
-      </div>
-    </div>
 
-  </section>
+        <!-- Account grid -->
+        <div class="accounts-grid" id="accountsGrid"></div>
 
-  <!-- ── View 3: System health ─────────────────────────────────── -->
-  <section class="view" id="view-syshealth">
+      </section>
 
-    <div class="syshealth-header">
-      <h2>System health</h2>
-      <p>Data sources this pipeline depends on — status as of last check.</p>
-    </div>
+      <!-- ── View: Analytics ──────────────────────────────── -->
+      <section class="view" id="view-analytics">
 
-    <div class="syshealth-table-wrap">
-      <table class="syshealth-table">
-        <thead>
-          <tr>
-            <th>Data source</th>
-            <th>Status</th>
-            <th>Last sync</th>
-          </tr>
-        </thead>
-        <tbody id="sysHealthBody">
-          <!-- populated by JS -->
-        </tbody>
-      </table>
-    </div>
+        <div class="analytics-section">
+          <div class="section-header">
+            <h2 class="section-title">Portfolio health trend</h2>
+            <p class="section-desc">Account distribution across health status — last 8 weeks</p>
+          </div>
+          <div class="chart-card">
+            <div class="chart-legend" id="portfolioLegend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#22c55e"></div><span>Green</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#f59e0b"></div><span>Yellow</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#ef4444"></div><span>Red</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#cbd5e1"></div><span>No data</span>
+              </div>
+            </div>
+            <div class="chart-container" style="height:220px">
+              <canvas id="portfolioChart"></canvas>
+            </div>
+          </div>
+        </div>
 
-  </section>
+        <div class="analytics-section" style="margin-top:28px">
+          <div class="section-header">
+            <h2 class="section-title">Account deep-dive</h2>
+            <p class="section-desc">8-week health and ChatAgent session trend — select an account</p>
+          </div>
 
-</main>
+          <div class="history-controls">
+            <label for="accountSelect" class="select-label">Account</label>
+            <select class="account-select" id="accountSelect"></select>
+          </div>
+
+          <div class="chart-card" id="accountChartCard">
+            <div class="chart-card-header">
+              <div>
+                <div class="chart-title" id="histChartTitle">Select an account above</div>
+                <div class="chart-subtitle" id="histChartSub"></div>
+              </div>
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#3b6fd4"></div>
+                <span>Health status (left axis)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#94a3b8;border-radius:0"></div>
+                <span>ChatAgent sessions (right axis, dashed)</span>
+              </div>
+            </div>
+            <div class="chart-container" style="height:260px">
+              <canvas id="historyChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ── View: Connections ────────────────────────────── -->
+      <section class="view" id="view-connections">
+
+        <div class="connections-header">
+          <h2 class="section-title">Connected services</h2>
+          <p class="section-desc">Data sources this pipeline depends on, and their current sync status.</p>
+        </div>
+
+        <div class="connections-list" id="connectionsList"></div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      Illustrative demo built with synthetic sample data for an interview exercise — not connected to any live system or real customer data.
+    </footer>
+
+  </div><!-- /main-wrapper -->
+
+</div><!-- /app-shell -->
 
 <!-- ── Drill-down modal ─────────────────────────────────────────────── -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
@@ -130,18 +220,17 @@
         <div class="modal-account-name" id="modalAccountName"></div>
         <div class="modal-meta" id="modalMeta"></div>
       </div>
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+          <line x1="2" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="2" x2="2" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
     <div class="modal-body" id="modalBody"></div>
   </div>
 </div>
 
-<!-- ── Footer ───────────────────────────────────────────────────────── -->
-<footer class="site-footer">
-  Illustrative demo built with synthetic sample data for an interview exercise — not connected to any live system or real customer data.
-</footer>
-
-<!-- ── Scripts ──────────────────────────────────────────────────────── -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="script.js"></script>
 
