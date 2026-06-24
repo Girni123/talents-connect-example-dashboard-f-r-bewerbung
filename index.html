@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Health — weekly digest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-brand">
+    <h1>Customer Health — weekly digest</h1>
+    <span class="demo-badge">Demo · synthetic sample data</span>
+  </div>
+  <span class="week-label" id="weekLabel">W26 · 2026</span>
+</header>
+
+<!-- ── Navigation ──────────────────────────────────────────────────── -->
+<nav class="site-nav">
+  <button class="nav-btn active" data-view="review">This week's review</button>
+  <button class="nav-btn" data-view="history">History</button>
+  <button class="nav-btn" data-view="syshealth">System health</button>
+</nav>
+
+<!-- ── Main ────────────────────────────────────────────────────────── -->
+<main class="main-content">
+
+  <!-- ── View 1: This week's review ────────────────────────────── -->
+  <section class="view active" id="view-review">
+
+    <!-- Toggle -->
+    <div class="view-toggle-bar">
+      <span class="toggle-label">Pipeline stage</span>
+      <div class="toggle-switch">
+        <button class="toggle-opt selected" id="toggleBefore">Before Friday</button>
+        <button class="toggle-opt" id="toggleFriday">Friday — data ready</button>
+      </div>
+      <span class="toggle-hint" id="toggleHint">Data not yet generated — switch to Friday to see account summaries.</span>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar" id="statsBar">
+      <div class="stat-chip green">
+        <span class="stat-num" id="countGreen">—</span>
+        <span class="stat-lbl">Green</span>
+      </div>
+      <div class="stat-chip yellow">
+        <span class="stat-num" id="countYellow">—</span>
+        <span class="stat-lbl">Yellow</span>
+      </div>
+      <div class="stat-chip red">
+        <span class="stat-num" id="countRed">—</span>
+        <span class="stat-lbl">Red</span>
+      </div>
+      <div class="stat-chip gray">
+        <span class="stat-num" id="countNodata">—</span>
+        <span class="stat-lbl">No data</span>
+      </div>
+    </div>
+
+    <!-- Accounts grid -->
+    <div class="accounts-grid" id="accountsGrid"></div>
+
+  </section>
+
+  <!-- ── View 2: History ───────────────────────────────────────── -->
+  <section class="view" id="view-history">
+
+    <div class="history-controls">
+      <label for="accountSelect">Account</label>
+      <select class="account-select" id="accountSelect">
+        <!-- populated by JS -->
+      </select>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title" id="histChartTitle">Select an account</div>
+      <div class="chart-subtitle" id="histChartSub"></div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#4a7fc1"></div>
+          <span>Health status (left axis: Red · Yellow · Green)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#94a3b8"></div>
+          <span>ChatAgent sessions (right axis, dashed)</span>
+        </div>
+      </div>
+      <div class="chart-container">
+        <canvas id="historyChart"></canvas>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── View 3: System health ─────────────────────────────────── -->
+  <section class="view" id="view-syshealth">
+
+    <div class="syshealth-header">
+      <h2>System health</h2>
+      <p>Data sources this pipeline depends on — status as of last check.</p>
+    </div>
+
+    <div class="syshealth-table-wrap">
+      <table class="syshealth-table">
+        <thead>
+          <tr>
+            <th>Data source</th>
+            <th>Status</th>
+            <th>Last sync</th>
+          </tr>
+        </thead>
+        <tbody id="sysHealthBody">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ── Drill-down modal ─────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <div class="modal-title-block">
+        <div class="modal-account-name" id="modalAccountName"></div>
+        <div class="modal-meta" id="modalMeta"></div>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ── Footer ───────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  Illustrative demo built with synthetic sample data for an interview exercise — not connected to any live system or real customer data.
+</footer>
+
+<!-- ── Scripts ──────────────────────────────────────────────────────── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

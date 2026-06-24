@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "reportWeek": "W26 · 2026",
+    "note": "Synthetic sample data for interview exercise — no live system connected"
+  },
+  "systemHealth": [
+    { "name": "Analytics / usage dashboard", "status": "ok", "lastSync": "4 min ago" },
+    { "name": "Ticketing system", "status": "ok", "lastSync": "2 min ago" },
+    { "name": "NPS survey tool", "status": "degraded", "lastSync": "6h ago", "note": "last sync 6 h ago — retrying" },
+    { "name": "Email / CRM inbox", "status": "ok", "lastSync": "1 min ago" },
+    { "name": "n8n orchestration workflow", "status": "ok", "lastSync": "8 min ago" }
+  ],
+  "accounts": [
+    {
+      "id": "westpark-mobel",
+      "name": "Westpark Möbel GmbH",
+      "sector": "Manufacturing",
+      "arr": 84000,
+      "tenure": 32,
+      "csm": "Lia",
+      "health": "Yellow",
+      "usage": {
+        "csmLogins": 4,
+        "customerLogins": 17,
+        "activePostings": 12,
+        "chatAgentSessions": 88,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 7,
+        "date": "2026-04-18",
+        "comment": "Works well, would like better reporting."
+      },
+      "tickets": [
+        { "id": "TS-4426", "severity": "Low", "status": "Resolved", "subject": "How to add a new department" }
+      ],
+      "email": {
+        "from": "Margit Wagner, Westpark Möbel GmbH",
+        "date": "2026-05-09",
+        "excerpt": "Liebe Lia, könntest du uns einen Termin zum Reporting setzen? Wir möchten verstehen, welche Kennzahlen wir für die Geschäftsleitung am besten zeigen können. Kein Drama, einfach Wunschthema."
+      },
+      "summary": {
+        "text": "NPS at 7, customer has flagged reporting as a friction point. Came up in conversation that they're also thinking ahead about renewal pricing. Goal: keep the relationship warm, schedule a reporting deep-dive.",
+        "synthetic": false
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [2, 3, 2, 2, 3, 2, 2, 2],
+        "chatAgentSessions": [72, 91, 85, 78, 94, 88, 92, 88]
+      }
+    },
+    {
+      "id": "nordwind-logistik",
+      "name": "Nordwind Logistik AG",
+      "sector": "Logistics",
+      "arr": 156000,
+      "tenure": 47,
+      "csm": "Marek",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 6,
+        "customerLogins": 41,
+        "activePostings": 24,
+        "chatAgentSessions": 312,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 9,
+        "date": "2026-04-22",
+        "comment": "Saves us a lot of time."
+      },
+      "tickets": [
+        { "id": "TS-4431", "severity": "Low", "status": "Resolved", "subject": "New hiring manager onboarding question" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "Usage metrics remain strong this week with 41 customer-side logins and 312 ChatAgent sessions. One low-severity onboarding question was resolved quickly. Relationship is healthy and no action required.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [280, 295, 310, 301, 318, 305, 312, 312]
+      }
+    },
+    {
+      "id": "federgleiter-pharma",
+      "name": "Federgleiter Pharma AG",
+      "sector": "Pharma",
+      "arr": 220000,
+      "tenure": 18,
+      "csm": "Lia",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 8,
+        "customerLogins": 52,
+        "activePostings": 31,
+        "chatAgentSessions": 488,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-03-31",
+        "comment": "Solid product, ChatAgent occasionally inconsistent."
+      },
+      "tickets": [
+        { "id": "TS-4432", "severity": "Medium", "status": "Resolved", "subject": "ChatAgent answers in English when prompted in German" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "Platform activity is high with 488 ChatAgent sessions and 52 customer-side logins. A medium ticket on ChatAgent language behaviour was resolved this week. NPS of 8 reflects strong overall satisfaction with a note on consistency to monitor.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 2, 3, 3, 3, 3],
+        "chatAgentSessions": [450, 462, 475, 480, 492, 478, 485, 488]
+      }
+    },
+    {
+      "id": "eichenstamm",
+      "name": "Eichenstamm Industries",
+      "sector": "Manufacturing",
+      "arr": 95000,
+      "tenure": 11,
+      "csm": "Sara",
+      "health": "Yellow",
+      "usage": {
+        "csmLogins": 2,
+        "customerLogins": 8,
+        "activePostings": 6,
+        "chatAgentSessions": 22,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 5,
+        "date": "2026-04-09",
+        "comment": "Custom field issues keep coming back."
+      },
+      "tickets": [
+        { "id": "TS-4429", "severity": "High", "status": "Resolved", "subject": "Bulk applicant export failed twice" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "A recurring custom-field issue and a bulk export failure last week (now resolved) align with the NPS score of 5 and ongoing friction in this account. Usage is below average for their tenure at only 22 ChatAgent sessions. CSM Sara to check in proactively and assess whether adoption support is needed.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 2, 2, 2, 3, 2, 2, 2],
+        "chatAgentSessions": [34, 28, 32, 19, 26, 24, 25, 22]
+      }
+    },
+    {
+      "id": "klarweiss-hotels",
+      "name": "Klarweiss Hotels",
+      "sector": "Hospitality",
+      "arr": 64000,
+      "tenure": 24,
+      "csm": "Lia",
+      "health": "Red",
+      "usage": {
+        "csmLogins": 1,
+        "customerLogins": 0,
+        "activePostings": 9,
+        "chatAgentSessions": 4,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 3,
+        "date": "2026-04-15",
+        "comment": "We have been escalating for weeks."
+      },
+      "tickets": [
+        { "id": "TS-4424", "severity": "High", "status": "Open", "subject": "Login broken for all hiring managers" },
+        { "id": "TS-4425", "severity": "Medium", "status": "Resolved", "subject": "Password reset email not arriving" }
+      ],
+      "email": {
+        "from": "Beata Hofmann, Klarweiss Hotels",
+        "date": "2026-05-12",
+        "excerpt": "Hallo Lia, das Login-Problem ist immer noch nicht behoben. Wir haben gestern drei Bewerbungen verloren, weil unsere Hiring Manager nicht in die Plattform kamen. Ich brauche heute eine Lösung oder zumindest eine Ansage, wann es funktioniert."
+      },
+      "summary": {
+        "text": "Severe login issues since Monday. Three high-severity tickets open, customer escalating, has lost applicants because of it. NPS dropped to 3. CSM action: call scheduled Friday with the customer's IT lead.",
+        "synthetic": false
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [2, 2, 2, 2, 2, 2, 1, 1],
+        "chatAgentSessions": [45, 40, 38, 30, 22, 15, 8, 4]
+      }
+    },
+    {
+      "id": "bauernhof-sohne",
+      "name": "Bauernhof & Söhne KG",
+      "sector": "Retail",
+      "arr": 41000,
+      "tenure": 8,
+      "csm": "Marek",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 3,
+        "customerLogins": 19,
+        "activePostings": 7,
+        "chatAgentSessions": 71,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-04-20",
+        "comment": "Good start, happy with the team support."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Still in early onboarding at 8 months, but usage is healthy for their size with 19 customer-side logins and 71 ChatAgent sessions. No open tickets this week. NPS of 8 suggests a positive start; CSM Marek to continue regular check-ins through Q3.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [55, 62, 65, 68, 72, 70, 72, 71]
+      }
+    },
+    {
+      "id": "sturzbach-versicherung",
+      "name": "Sturzbach Versicherung",
+      "sector": "Insurance",
+      "arr": 312000,
+      "tenure": 60,
+      "csm": "Sara",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 11,
+        "customerLogins": 84,
+        "activePostings": 47,
+        "chatAgentSessions": 620,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 10,
+        "date": "2026-04-25",
+        "comment": null
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Flagship account with the highest ChatAgent volume in the portfolio at 620 sessions this week. NPS of 10, no comments, no tickets. Renewal not imminent — relationship in excellent shape and no action required.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [580, 601, 615, 598, 622, 612, 618, 620]
+      }
+    },
+    {
+      "id": "kupferweiss-engineering",
+      "name": "Kupferweiss Engineering",
+      "sector": "Engineering",
+      "arr": 78000,
+      "tenure": 14,
+      "csm": "Lia",
+      "health": "Yellow",
+      "usage": {
+        "csmLogins": 4,
+        "customerLogins": 12,
+        "activePostings": 8,
+        "chatAgentSessions": 38,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 6,
+        "date": "2026-03-27",
+        "comment": "Generally good, some friction in customization."
+      },
+      "tickets": [
+        { "id": "TS-4427", "severity": "Medium", "status": "Open", "subject": "Custom field disappeared from application form" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "A medium-severity open ticket on a missing custom field is outstanding, consistent with the NPS score of 6 and recurring customization friction. Usage is modest at 38 ChatAgent sessions for a 14-month tenure. CSM Lia to follow up on the open ticket by end of week.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 2, 2, 2, 2, 3, 2, 2],
+        "chatAgentSessions": [44, 40, 38, 42, 36, 42, 38, 38]
+      }
+    },
+    {
+      "id": "mondblatt-verlag",
+      "name": "Mondblatt Verlag",
+      "sector": "Media",
+      "arr": 38000,
+      "tenure": 27,
+      "csm": "Sara",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 2,
+        "customerLogins": 14,
+        "activePostings": 5,
+        "chatAgentSessions": 44,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-04-05",
+        "comment": "Works for our team, easy to use."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Stable, low-touch account with consistent usage patterns across 27 months. No tickets this week and NPS of 8 reflects steady satisfaction. No action required.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [40, 42, 44, 41, 46, 44, 43, 44]
+      }
+    },
+    {
+      "id": "albrecht-pflege",
+      "name": "Albrecht Pflege",
+      "sector": "Healthcare",
+      "arr": 122000,
+      "tenure": 19,
+      "csm": "Lia",
+      "health": "Red",
+      "usage": {
+        "csmLogins": 5,
+        "customerLogins": 26,
+        "activePostings": 14,
+        "chatAgentSessions": 71,
+        "chatAgentPriorWeek": 380
+      },
+      "nps": {
+        "score": 4,
+        "date": "2026-04-10",
+        "comment": "ChatAgent worked great until recently."
+      },
+      "tickets": [
+        { "id": "TS-4421", "severity": "High", "status": "Open", "subject": "ChatAgent stops responding mid-conversation for applicants" },
+        { "id": "TS-4422", "severity": "High", "status": "Open", "subject": "Cannot create hiring manager accounts since Tuesday" },
+        { "id": "TS-4423", "severity": "Medium", "status": "Open", "subject": "Job applications missing in JobShop dashboard" }
+      ],
+      "email": {
+        "from": "Stefan Brauer, Albrecht Pflege",
+        "date": "2026-05-11",
+        "excerpt": "Hi Lia, der ChatAgent gibt seit Dienstag keine Antworten mehr auf Bewerberfragen. Unsere Recruiter müssen jetzt manuell antworten und wir verlieren Zeit. Wann ist das gefixt?"
+      },
+      "summary": {
+        "text": "ChatAgent has been essentially down since Tuesday; usage is off about 81% week over week (71 vs 380 sessions). Customer is frustrated, NPS dropped to 4. Engineering escalation pending. CSM action: meeting with Engineering scheduled Friday morning.",
+        "synthetic": false
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 2, 1],
+        "chatAgentSessions": [360, 370, 380, 375, 380, 362, 380, 71]
+      }
+    },
+    {
+      "id": "hortus-catering",
+      "name": "Hortus Catering",
+      "sector": "Hospitality",
+      "arr": 56000,
+      "tenure": 9,
+      "csm": "Marek",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 3,
+        "customerLogins": 21,
+        "activePostings": 8,
+        "chatAgentSessions": 92,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 9,
+        "date": "2026-04-12",
+        "comment": "Very happy so far."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "New-ish account at 9 months, showing healthy ChatAgent growth at 92 sessions. NPS of 9 with no friction flagged. CSM Marek monitoring onboarding milestones; next check-in due end of month.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [70, 78, 82, 85, 88, 90, 91, 92]
+      }
+    },
+    {
+      "id": "rheinkurve-logistik",
+      "name": "Rheinkurve Logistik GmbH",
+      "sector": "Logistics",
+      "arr": 188000,
+      "tenure": 41,
+      "csm": "Lia",
+      "health": "Yellow",
+      "usage": {
+        "csmLogins": 5,
+        "customerLogins": 32,
+        "activePostings": 19,
+        "chatAgentSessions": 188,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 6,
+        "date": "2026-03-20",
+        "comment": "Platform is OK, would like more flexibility."
+      },
+      "tickets": [
+        { "id": "TS-4428", "severity": "Low", "status": "Resolved", "subject": "Question about user permissions" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "Usage growth has plateaued over the past month and NPS of 6 hints at unspoken friction. A permissions question was resolved quickly. CSM Lia to schedule a mid-year check-in to understand whether product depth is being fully utilized.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [2, 2, 3, 2, 2, 2, 2, 2],
+        "chatAgentSessions": [178, 185, 190, 182, 188, 185, 190, 188]
+      }
+    },
+    {
+      "id": "steinmark-software",
+      "name": "Steinmark Software AG",
+      "sector": "Tech",
+      "arr": 144000,
+      "tenure": 22,
+      "csm": "Sara",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 6,
+        "customerLogins": 38,
+        "activePostings": 17,
+        "chatAgentSessions": 211,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-04-08",
+        "comment": "Good product, well-supported."
+      },
+      "tickets": [
+        { "id": "TS-4433", "severity": "Low", "status": "Resolved", "subject": "Question about reporting export format" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "Healthy usage across all metrics; a reporting export question was resolved same-day. NPS of 8 and 22 months of tenure with no escalations. Account is progressing well and no action required.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [195, 200, 205, 208, 211, 208, 210, 211]
+      }
+    },
+    {
+      "id": "tannenwald-bank",
+      "name": "Tannenwald Bank",
+      "sector": "Finance",
+      "arr": 285000,
+      "tenure": 53,
+      "csm": "Marek",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 9,
+        "customerLogins": 67,
+        "activePostings": 41,
+        "chatAgentSessions": 511,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 9,
+        "date": "2026-04-20",
+        "comment": "Glad we switched two years ago."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "One of the portfolio's longest-tenured and highest-value accounts, running consistently well at 511 ChatAgent sessions. NPS of 9 with strong renewal sentiment. No issues open; CSM Marek maintaining the established cadence.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [490, 498, 502, 508, 511, 505, 509, 511]
+      }
+    },
+    {
+      "id": "vogt-maschinenbau",
+      "name": "Vogt Maschinenbau",
+      "sector": "Manufacturing",
+      "arr": 92000,
+      "tenure": 16,
+      "csm": "Lia",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 4,
+        "customerLogins": 24,
+        "activePostings": 13,
+        "chatAgentSessions": 102,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-04-02",
+        "comment": "Solid platform, team is responsive."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Solid usage at 102 ChatAgent sessions and 24 customer-side logins. No tickets this week. Account has moved past the onboarding phase at 16 months and CSM Lia's regular cadence is maintaining a healthy baseline.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [88, 92, 95, 98, 100, 99, 101, 102]
+      }
+    },
+    {
+      "id": "schiefer-energie",
+      "name": "Schiefer Energie",
+      "sector": "Utilities",
+      "arr": 412000,
+      "tenure": 38,
+      "csm": "Sara",
+      "health": "Yellow",
+      "usage": {
+        "csmLogins": 7,
+        "customerLogins": 49,
+        "activePostings": 28,
+        "chatAgentSessions": 388,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 7,
+        "date": "2026-03-15",
+        "comment": "Generally satisfied, awaiting branding update."
+      },
+      "tickets": [
+        { "id": "TS-4430", "severity": "Low", "status": "Resolved", "subject": "Branding update on JobShop landing page" }
+      ],
+      "email": null,
+      "summary": {
+        "text": "Highest-ARR account in the portfolio at €412k. A branding update request was resolved this week. NPS of 7 is overdue for a refresh — survey ping to be raised with CSM Sara. Usage is solid and no immediate risk, but contract size warrants close monitoring.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 2, 2, 3, 2, 2, 2, 2],
+        "chatAgentSessions": [370, 378, 382, 390, 385, 388, 385, 388]
+      }
+    },
+    {
+      "id": "bergmann-personal",
+      "name": "Bergmann Personal",
+      "sector": "Staffing",
+      "arr": 108000,
+      "tenure": 21,
+      "csm": "Lia",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 5,
+        "customerLogins": 33,
+        "activePostings": 21,
+        "chatAgentSessions": 244,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 9,
+        "date": "2026-04-17",
+        "comment": "Strong product, ChatAgent is a time-saver."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Active account with 244 ChatAgent sessions and 33 customer-side logins. No open tickets and NPS of 9 reflects strong satisfaction. CSM Lia has established a solid monthly cadence and no action is required this week.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [228, 234, 238, 240, 244, 242, 244, 244]
+      }
+    },
+    {
+      "id": "wiesenburg-schulen",
+      "name": "Wiesenburg Schulen",
+      "sector": "Education",
+      "arr": 33000,
+      "tenure": 6,
+      "csm": "Marek",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 1,
+        "customerLogins": 8,
+        "activePostings": 4,
+        "chatAgentSessions": 19,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-05-01",
+        "comment": "Easy to get started, helpful onboarding."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Smallest account in the portfolio at €33k, but usage is appropriate for their size at 6 months tenure. No tickets this week and NPS of 8 suggests a positive onboarding experience. CSM Marek to schedule a 90-day review call.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [10, 12, 14, 15, 17, 18, 19, 19]
+      }
+    },
+    {
+      "id": "stahlberg-industries",
+      "name": "Stahlberg Industries",
+      "sector": "Manufacturing",
+      "arr": 76000,
+      "tenure": 13,
+      "csm": "Sara",
+      "health": "Green",
+      "usage": {
+        "csmLogins": 4,
+        "customerLogins": 22,
+        "activePostings": 11,
+        "chatAgentSessions": 88,
+        "chatAgentPriorWeek": null
+      },
+      "nps": {
+        "score": 8,
+        "date": "2026-04-14",
+        "comment": "Works well for our recruiting needs."
+      },
+      "tickets": [],
+      "email": null,
+      "summary": {
+        "text": "Steady performance with 88 ChatAgent sessions and 22 customer-side logins. No tickets open this week. At 13 months the account has moved past onboarding and CSM Sara's cadence is working well.",
+        "synthetic": true
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 3, 3, 3, 3],
+        "chatAgentSessions": [80, 82, 85, 86, 88, 87, 88, 88]
+      }
+    },
+    {
+      "id": "goldwald-hotels",
+      "name": "Goldwald Hotels",
+      "sector": "Hospitality",
+      "arr": 88000,
+      "tenure": 29,
+      "csm": "Lia",
+      "health": "nodata",
+      "usage": null,
+      "nps": null,
+      "npsHistoric": {
+        "score": 8,
+        "date": "2026-01-15",
+        "comment": "Solid, no complaints."
+      },
+      "tickets": [],
+      "email": {
+        "from": "Jan Petersen, Goldwald Hotels",
+        "date": "2026-04-28",
+        "excerpt": "Hallo, wir möchten den Vertrag zum nächsten Stichtag kündigen. Wir haben uns für eine andere Lösung entschieden. Bitte teilt mir die Frist mit."
+      },
+      "summary": {
+        "text": "No usage data this week — all metrics are zero and no NPS response has arrived this period. A churn-intent email came in on 2026-04-28: the customer has indicated they want to cancel at the next contract date and have already chosen an alternative solution. There are no numeric signals here. The only evidence is the email, which is precisely why missing-data accounts cannot simply be skipped.",
+        "synthetic": false
+      },
+      "history": {
+        "weeks": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"],
+        "healthScore": [3, 3, 3, 3, 2, 2, 2, 0],
+        "chatAgentSessions": [120, 115, 108, 100, 80, 60, 20, 0]
+      }
+    }
+  ]
+}
