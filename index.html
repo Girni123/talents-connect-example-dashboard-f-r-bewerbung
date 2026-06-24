@@ -89,14 +89,24 @@
       <!-- ── View: Overview ───────────────────────────────── -->
       <section class="view active" id="view-overview">
 
-        <!-- Toggle bar -->
-        <div class="view-toggle-bar">
-          <span class="toggle-label">Pipeline stage</span>
-          <div class="toggle-switch">
-            <button class="toggle-opt selected" id="toggleBefore">Before Friday</button>
-            <button class="toggle-opt" id="toggleFriday">Friday — data ready</button>
+        <!-- Mode banner -->
+        <div class="mode-banner draft" id="modeBanner">
+          <div class="mode-icon-wrap" id="modeIconWrap">
+            <svg id="modeIconDraft" viewBox="0 0 20 20" fill="none" width="18" height="18">
+              <path d="M13.5 3.5l3 3L6 17H3v-3L13.5 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+            <svg id="modeIconPublish" viewBox="0 0 20 20" fill="none" width="18" height="18" style="display:none">
+              <polyline points="3,10 8,15 17,5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <span class="toggle-hint" id="toggleHint">Data not yet generated — switch to Friday to see account summaries.</span>
+          <div class="mode-content">
+            <div class="mode-title" id="modeTitle">Entwurfsmodus</div>
+            <div class="mode-desc" id="modeDesc">Klicke direkt in eine Summary um sie zu bearbeiten oder zu ergänzen. Zahlen, Tickets und weitere Systemdaten kommen direkt aus dem System und sind schreibgeschützt.</div>
+          </div>
+          <div class="mode-switch">
+            <button class="mswitch-btn active" id="btnDraft">Entwurf</button>
+            <button class="mswitch-btn" id="btnPublish">Veröffentlichen →</button>
+          </div>
         </div>
 
         <!-- Stats chips -->
