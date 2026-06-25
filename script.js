@@ -103,22 +103,22 @@ function setMode(toPublish) {
     banner.className     = "mode-banner publish";
     iconDraft.style.display   = "none";
     iconPublish.style.display = "";
-    title.textContent    = "Veröffentlicht";
-    desc.textContent     = "Die Daten sind jetzt für alle Nutzer sichtbar. Summaries können nicht mehr bearbeitet werden — wechsle zurück zu Entwurf um Änderungen vorzunehmen.";
+    title.textContent    = "Published";
+    desc.textContent     = "Data is now visible to all users. Summaries are locked — switch back to Draft to make changes.";
     btnDraft.classList.remove("active");
     btnPublish.classList.add("active");
-    btnPublish.textContent = "Veröffentlicht ✓";
-    btnDraft.textContent   = "← Zurück zu Entwurf";
+    btnPublish.textContent = "Published ✓";
+    btnDraft.textContent   = "← Back to Draft";
   } else {
     banner.className     = "mode-banner draft";
     iconDraft.style.display   = "";
     iconPublish.style.display = "none";
-    title.textContent    = "Entwurfsmodus";
-    desc.textContent     = "Klicke direkt in eine Summary um sie zu bearbeiten oder zu ergänzen. Zahlen, Tickets und weitere Systemdaten kommen direkt aus dem System und sind schreibgeschützt.";
+    title.textContent    = "Draft mode";
+    desc.textContent     = "Click directly into any summary to edit or expand it. Numbers, tickets, and other system data come directly from the source and are read-only.";
     btnDraft.classList.add("active");
     btnPublish.classList.remove("active");
-    btnPublish.textContent = "Veröffentlichen →";
-    btnDraft.textContent   = "Entwurf";
+    btnPublish.textContent = "Publish →";
+    btnDraft.textContent   = "Draft";
   }
 
   renderAccountGrid();
@@ -178,7 +178,7 @@ function buildCard(acct) {
       : "";
 
   const draftBadge = isDraft
-    ? `<span class="draft-hint">✏ Entwurf</span>`
+    ? `<span class="draft-hint">✏ Draft</span>`
     : "";
 
   const cta = !isDraft ? `<span class="card-cta">Details →</span>` : "";

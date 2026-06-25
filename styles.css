@@ -372,7 +372,7 @@ body {
 }
 
 .card-summary.editable:empty::before {
-  content: "Noch keine Summary — hier klicken um zu schreiben…";
+  content: "No summary yet — click here to write one…";
   color: var(--text-3);
   font-style: italic;
   pointer-events: none;
